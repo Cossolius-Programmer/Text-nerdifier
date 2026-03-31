@@ -1,7 +1,7 @@
 import random
 
 def nerdify(text: str, strength: float) -> str:
-    if 0 >= strength >= 1:
+    if 0.0 >= strength >= 1.0:
         raise ValueError('Strength must be between 0 and 1')
     new_text = ''
     for char in text:
@@ -13,8 +13,8 @@ def nerdify(text: str, strength: float) -> str:
 
 while True:
     message = input('Enter a message: ')
-    if message == '':
+    if message == '': # need to stop program
         print()
         print("Ok we done.")
-        break
+        break # self close
     print(nerdify(message, 0.52))
